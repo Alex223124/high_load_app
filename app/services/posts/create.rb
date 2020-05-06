@@ -38,7 +38,7 @@ module Services
         end
       end
 
-      # good idea to store this data in dynamo db or
+      # good idea is to store this data in dynamo db or
       # other document-oriented storage
       # it's analytical information
       def create_match
