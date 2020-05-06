@@ -5,7 +5,7 @@ module Api
     class PostsController < ApplicationController
       def create
         @post = Services::Posts::Create.new(post_params).call
-
+        # TODO: this check should be inside service object
         if @post.try(:persisted?)
           render json: { code: 200, post: Posts::PostPresenter.new(@post) }, status: :ok
         else
